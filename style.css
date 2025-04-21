@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+:root {
+    --cor-de-fundo: #5c0e91;
+    --verde: #411177;
+    --branco: #ffffff;
+    --botao-ativo: #6f1bbe;
+    --botao-inativo: rgba(95, 36, 204, 0.5);
+    --texto-fundo: rgba(69, 17, 136, 0.384);
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
+}
+:root {
+    --cor-de-fundo: #a772e4;
+    --verde: #c26ffa;
+  }
+  
+
+.titulo-principal span {
+    color: var(--verde);
+}
+
+
+.botao {
+    font-family: 'Chakra Petch', sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+    border-top: none;
+}
+
+.botao:first-child {
+    border-radius: 40px 40px 0 0;
+}
+
+.botoes {
+    display: block;
+}
+
+.botao.ativo {
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
+
+.abas-textos {
+    background-color: var(--texto-fundo);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-conteudo.ativo {
+    display: block;
+}
+
+.aba-conteudo {
+    display: none;
+}
+
+.aba-conteudo-titulo-principal {
+    font-size: 28px;
+    text-align: center;
+}
+
+.aba-conteudo-titulo-secundario {
+    text-align: center;
+    color: var(--verde);
+    text-transform: uppercase;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contador-digito {
+    padding: 0 16px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.contador-digito-numero {
+    font-size: 80px;
+    margin: 0;
+
+}
+
+.contador-digito-texto {
+    color: var(--verde);
+    font-size: 20px;
+    margin: 0;
+
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
+}
+
+.acessibilidade {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+  }
+  
+  .acessibilidade button {
+    font-size: 16px;
+    margin: 2px;
+    padding: 8px;
+    background-color: var(--botao-ativo);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .titulo-principal {
+    text-align: center;
+    width: 100%;
+    font-size: 32px;
+  }
+  
+  .titulo-principal {
+    animation: fadeInDown 0.6s ease-out;
+}
+
+.contador-digito-numero {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+.botao {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.botao::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #c24ae0, #4facfe, #0c3b3d);
+    background-size: 400% 400%;
+    animation: bordaGlow 5s linear infinite;
+    border-radius: inherit;
+}
+
+@keyframes bordaGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.titulo-principal {
+    text-shadow: 0 0 5px #a5dadb, 0 0 10px #00f9ff, 0 0 20px #00f9ff;
+}
+.botao-fluido {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--botao-ativo);
+    background-color: transparent;
+    color: var(--branco);
+    z-index: 0;
+  }
+  
+  .botao-fluido::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, var(--botao-ativo) 10%, transparent 10.01%);
+    background-size: 10px 10px;
+    animation: fluid-border 1s linear infinite;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+  }
+  
+  @keyframes fluid-border {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  body {
+    background: linear-gradient(45deg, #5d3285, #a76aca, #00f9ff);
+    background-size: 600% 600%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
